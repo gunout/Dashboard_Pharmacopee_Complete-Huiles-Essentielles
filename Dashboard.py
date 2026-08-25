@@ -25,8 +25,9 @@ class CompleteEssentialOilDashboard:
                       '#4ECDC4', '#45B7D1', '#F9A602', '#6A0572', '#2A9D8F']
         
     def _get_complete_oils_config(self):
-        """Configuration complète pour toutes les huiles essentielles"""
+        """Configuration complète pour toutes les huiles essentielles (42 huiles)"""
         return {
+            # === 20 huiles existantes ===
             "Lavande": {
                 "production_base": 150, "price_base": 45, "type": "relaxante",
                 "proprietes": ["calmante", "cicatrisante", "antiseptique", "analgésique"],
@@ -206,18 +207,216 @@ class CompleteEssentialOilDashboard:
                 "contre_indications": ["Aucune connue"],
                 "prix_evolution": "++", "demande_evolution": "++",
                 "couleur": "#8B4513"
+            },
+
+            # === 12 nouvelles huiles (ajout précédent) ===
+            "Citronnelle": {
+                "production_base": 100, "price_base": 30, "type": "repulsif",
+                "proprietes": ["repulsive", "antiseptique", "antifongique", "digestive"],
+                "regions": ["Inde", "Chine", "Vietnam"], "rendement": 0.012,
+                "molecules_principales": ["Citronellal", "Géranial", "Limonène"],
+                "contre_indications": ["Peau sensible", "Femmes enceintes"],
+                "prix_evolution": "++", "demande_evolution": "+++",
+                "couleur": "#7CB342"
+            },
+            "Gingembre": {
+                "production_base": 70, "price_base": 55, "type": "digestive",
+                "proprietes": ["digestive", "tonique", "anti-inflammatoire", "stimulante"],
+                "regions": ["Inde", "Chine", "Nigeria"], "rendement": 0.008,
+                "molecules_principales": ["Zingibérène", "Gingérol", "Sesquiphellandrène"],
+                "contre_indications": ["Calculs biliaires", "Ulcères"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#D84315"
+            },
+            "Cannelle": {
+                "production_base": 40, "price_base": 80, "type": "stimulante",
+                "proprietes": ["stimulante", "antiseptique", "antispasmodique", "digestive"],
+                "regions": ["Sri Lanka", "Madagascar", "Inde"], "rendement": 0.006,
+                "molecules_principales": ["Cinnamaldéhyde", "Eugénol", "Linalol"],
+                "contre_indications": ["Femmes enceintes", "Peau sensible"],
+                "prix_evolution": "+++", "demande_evolution": "++",
+                "couleur": "#D2691E"
+            },
+            "Pamplemousse": {
+                "production_base": 120, "price_base": 28, "type": "detoxifiante",
+                "proprietes": ["detoxifiante", "tonique", "stimulante", "diurétique"],
+                "regions": ["USA", "Israël", "Chine"], "rendement": 0.004,
+                "molecules_principales": ["Limonène", "Pinène", "Myrcène"],
+                "contre_indications": ["Photosensibilisante", "Interactions médicamenteuses"],
+                "prix_evolution": "+", "demande_evolution": "+++",
+                "couleur": "#FFB74D"
+            },
+            "Mandarine": {
+                "production_base": 150, "price_base": 22, "type": "calmante",
+                "proprietes": ["calmante", "sédative", "digestive", "spasmolytique"],
+                "regions": ["Italie", "Espagne", "Maroc"], "rendement": 0.004,
+                "molecules_principales": ["Limonène", "Myrcène", "α-Pinène"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "+", "demande_evolution": "++",
+                "couleur": "#FFA726"
+            },
+            "Orange douce": {
+                "production_base": 200, "price_base": 18, "type": "relaxante",
+                "proprietes": ["relaxante", "antiseptique", "digestive", "tonique"],
+                "regions": ["Brésil", "USA", "Espagne"], "rendement": 0.004,
+                "molecules_principales": ["Limonène", "Myrcène", "Pinène"],
+                "contre_indications": ["Photosensibilisante"],
+                "prix_evolution": "+", "demande_evolution": "+++",
+                "couleur": "#FF9800"
+            },
+            "Bois de rose": {
+                "production_base": 15, "price_base": 110, "type": "cosmetique",
+                "proprietes": ["regenerante", "calmante", "antiseptique", "hydratante"],
+                "regions": ["Brésil", "Guyane", "Pérou"], "rendement": 0.003,
+                "molecules_principales": ["Linalol", "α-Terpinéol", "Géraniol"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "+++", "demande_evolution": "++",
+                "couleur": "#F48FB1"
+            },
+            "Patchouli": {
+                "production_base": 35, "price_base": 85, "type": "grounding",
+                "proprietes": ["grounding", "antiseptique", "antifongique", "aphrodisiaque"],
+                "regions": ["Indonésie", "Chine", "Inde"], "rendement": 0.005,
+                "molecules_principales": ["Patchoulol", "α-Patchoulène", "β-Caryophyllène"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "+++", "demande_evolution": "++",
+                "couleur": "#8D6E63"
+            },
+            "Santal": {
+                "production_base": 12, "price_base": 150, "type": "spirituelle",
+                "proprietes": ["meditative", "apaisante", "antiseptique", "anti-inflammatoire"],
+                "regions": ["Inde", "Australie", "Nouvelle-Calédonie"], "rendement": 0.002,
+                "molecules_principales": ["α-Santalol", "β-Santalol", "α-Bisabolol"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "+++", "demande_evolution": "+",
+                "couleur": "#A1887F"
+            },
+            "Jasmin": {
+                "production_base": 10, "price_base": 200, "type": "aphrodisiaque",
+                "proprietes": ["aphrodisiaque", "relaxante", "antispasmodique", "équilibrante"],
+                "regions": ["Inde", "Egypte", "Maroc"], "rendement": 0.001,
+                "molecules_principales": ["Benzyl acétate", "Linalol", "Phényléthyl alcool"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "+++", "demande_evolution": "++",
+                "couleur": "#F8BBD0"
+            },
+            "Rose": {
+                "production_base": 8, "price_base": 250, "type": "cosmetique",
+                "proprietes": ["équilibrante", "hydratante", "antiseptique", "tonique"],
+                "regions": ["Bulgarie", "Turquie", "Maroc"], "rendement": 0.001,
+                "molecules_principales": ["Citronellol", "Géraniol", "Phényléthyl alcool"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "+++", "demande_evolution": "+++",
+                "couleur": "#F06292"
+            },
+            "Cardamome": {
+                "production_base": 25, "price_base": 95, "type": "digestive",
+                "proprietes": ["digestive", "antispasmodique", "tonique", "expectorante"],
+                "regions": ["Guatemala", "Inde", "Sri Lanka"], "rendement": 0.005,
+                "molecules_principales": ["Cinéole", "α-Terpinéol", "Linalol"],
+                "contre_indications": ["Calculs biliaires"],
+                "prix_evolution": "+++", "demande_evolution": "++",
+                "couleur": "#A5D6A7"
+            },
+
+            # === 10 nouvelles huiles (ajout supplémentaire) ===
+            "Thym": {
+                "production_base": 50, "price_base": 45, "type": "antiseptique",
+                "proprietes": ["antibactérienne", "antifongique", "immunostimulante", "expectorante"],
+                "regions": ["France", "Espagne", "Maroc"], "rendement": 0.012,
+                "molecules_principales": ["Thymol", "Carvacrol", "p-Cymène"],
+                "contre_indications": ["Femmes enceintes", "Hypertension"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#7B1FA2"
+            },
+            "Origan": {
+                "production_base": 30, "price_base": 55, "type": "antiseptique",
+                "proprietes": ["antibactérienne", "antivirale", "antiparasitaire", "anti-inflammatoire"],
+                "regions": ["Grèce", "Turquie", "Maroc"], "rendement": 0.010,
+                "molecules_principales": ["Carvacrol", "Thymol", "p-Cymène"],
+                "contre_indications": ["Femmes enceintes", "Allergie aux Lamiacées"],
+                "prix_evolution": "++", "demande_evolution": "+++",
+                "couleur": "#D32F2F"
+            },
+            "Marjolaine": {
+                "production_base": 35, "price_base": 50, "type": "relaxante",
+                "proprietes": ["sédative", "antispasmodique", "digestive", "régulatrice nerveuse"],
+                "regions": ["France", "Egypte", "Tunisie"], "rendement": 0.008,
+                "molecules_principales": ["Terpinène-4-ol", "Sabinène", "α-Terpinène"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#8BC34A"
+            },
+            "Lavandin": {
+                "production_base": 100, "price_base": 30, "type": "respiratoire",
+                "proprietes": ["expectorante", "décongestionnante", "antiseptique", "calmante"],
+                "regions": ["France", "Espagne", "Italie"], "rendement": 0.016,
+                "molecules_principales": ["Linalol", "Acétate de linalyle", "Cinéole"],
+                "contre_indications": ["Femmes enceintes", "Enfants < 6 ans"],
+                "prix_evolution": "+", "demande_evolution": "++",
+                "couleur": "#9575CD"
+            },
+            "Bergamote": {
+                "production_base": 90, "price_base": 35, "type": "équilibrante",
+                "proprietes": ["équilibrante", "antidépressive", "antiseptique", "digestive"],
+                "regions": ["Italie", "Côte d'Ivoire", "Argentine"], "rendement": 0.004,
+                "molecules_principales": ["Limonène", "Linalol", "Acétate de linalyle"],
+                "contre_indications": ["Photosensibilisante"],
+                "prix_evolution": "++", "demande_evolution": "+++",
+                "couleur": "#F9A825"
+            },
+            "Citron vert": {
+                "production_base": 100, "price_base": 25, "type": "tonique",
+                "proprietes": ["tonique", "digestive", "antiseptique", "détoxifiante"],
+                "regions": ["Mexique", "Inde", "Brésil"], "rendement": 0.004,
+                "molecules_principales": ["Limonène", "β-Pinène", "γ-Terpinène"],
+                "contre_indications": ["Photosensibilisante"],
+                "prix_evolution": "+", "demande_evolution": "++",
+                "couleur": "#CDDC39"
+            },
+            "Poivre noir": {
+                "production_base": 45, "price_base": 65, "type": "digestive",
+                "proprietes": ["digestive", "stimulante", "antiseptique", "antioxydante"],
+                "regions": ["Inde", "Vietnam", "Brésil"], "rendement": 0.005,
+                "molecules_principales": ["Caryophyllène", "Limonène", "Pinène"],
+                "contre_indications": ["Ulcères gastriques", "Hypertension"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#424242"
+            },
+            "Fenouil": {
+                "production_base": 60, "price_base": 40, "type": "digestive",
+                "proprietes": ["digestive", "carminative", "détoxifiante", "expectorante"],
+                "regions": ["France", "Inde", "Egypte"], "rendement": 0.007,
+                "molecules_principales": ["Trans-anéthole", "Fenchone", "Estragole"],
+                "contre_indications": ["Femmes enceintes", "Épilepsie"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#66BB6A"
+            },
+            "Anis étoilé": {
+                "production_base": 20, "price_base": 70, "type": "digestive",
+                "proprietes": ["digestive", "antispasmodique", "expectorante", "stimulante"],
+                "regions": ["Chine", "Vietnam", "Inde"], "rendement": 0.004,
+                "molecules_principales": ["Trans-anéthole", "Linalol", "Estragole"],
+                "contre_indications": ["Femmes enceintes", "Allergie aux apiacées"],
+                "prix_evolution": "+++", "demande_evolution": "+",
+                "couleur": "#8D6E63"
+            },
+            "Carotte": {
+                "production_base": 15, "price_base": 90, "type": "cosmetique",
+                "proprietes": ["régénérante cutanée", "antioxydante", "équilibrante", "hydratante"],
+                "regions": ["France", "Inde", "USA"], "rendement": 0.002,
+                "molecules_principales": ["β-Caryophyllène", "Daucène", "α-Pinène"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "+++", "demande_evolution": "++",
+                "couleur": "#FF8A65"
             }
         }
     
     def generate_comprehensive_data(self, oil_name, start_year=2000, end_year=2025):
         """Génère des données complètes pour le dashboard"""
         config = self.oils_config[oil_name]
-        
-        # Correction: Utilisation de 'YE' au lieu de 'Y' pour la fréquence annuelle
-        dates = pd.date_range(start=f'{start_year}-01-01', end=f'{end_year}-12-31', freq='YE')
+        dates = pd.date_range(start=f'{start_year}-01-01', end=f'{end_year}-12-31', freq='YS')
         years = [date.year for date in dates]
-        
-        # Génération de données réalistes avec tendances
         data = {
             'Annee': years,
             'Production_Mondiale': self._generate_trend_data(config["production_base"], years, trend=0.08),
@@ -235,25 +434,21 @@ class CompleteEssentialOilDashboard:
             'Exportations': self._generate_trend_data(config["production_base"] * 0.7, years, trend=0.10),
             'Surface_Cultivee': self._generate_trend_data(config["production_base"] / config["rendement"] * 10, years, trend=0.09)
         }
-        
         return pd.DataFrame(data)
     
     def _generate_trend_data(self, base, years, trend=0.1, volatility=0.1):
-        """Génère des données avec tendance"""
         data = []
         for i, year in enumerate(years):
             growth = 1 + trend * i
             noise = np.random.normal(1, volatility)
-            # Ajout d'événements spécifiques
-            if year == 2008:  # Crise économique
+            if year == 2008:
                 noise *= 0.9
-            elif year == 2020:  # COVID
+            elif year == 2020:
                 noise *= 1.2
             data.append(base * growth * noise)
         return data
     
     def _generate_quality_data(self, base, years, improvement=0.01):
-        """Génère des données de qualité avec amélioration"""
         data = []
         for year in years:
             improvement_factor = 1 + improvement * (year - 2000)
@@ -263,7 +458,6 @@ class CompleteEssentialOilDashboard:
         return data
     
     def _generate_research_data(self, years):
-        """Génère des données de recherche scientifique"""
         data = []
         for year in years:
             if year <= 2005:
@@ -277,7 +471,6 @@ class CompleteEssentialOilDashboard:
         return data
     
     def _generate_usage_data(self, base, years, growth=0.015):
-        """Génère des données d'utilisation"""
         data = []
         for year in years:
             growth_factor = 1 + growth * (year - 2000)
@@ -287,19 +480,17 @@ class CompleteEssentialOilDashboard:
         return data
     
     def _generate_impact_data(self, base, years):
-        """Génère des données d'impact environnemental"""
         data = []
         for year in years:
-            improvement = 1 - 0.01 * (year - 2000)  # Amélioration progressive
+            improvement = 1 - 0.01 * (year - 2000)
             noise = np.random.normal(1, 0.08)
             value = max(10, base * improvement * noise)
             data.append(value)
         return data
 
+# --- Fonctions d'affichage (inchangées) ---
 def create_kpi_metrics(df, oil_config):
-    """Crée les métriques KPI pour le dashboard"""
     col1, col2, col3, col4 = st.columns(4)
-    
     with col1:
         current_production = df['Production_Mondiale'].iloc[-1]
         st.metric(
@@ -307,7 +498,6 @@ def create_kpi_metrics(df, oil_config):
             value=f"{current_production:,.0f} tonnes",
             delta=f"{((df['Production_Mondiale'].iloc[-1] / df['Production_Mondiale'].iloc[0]) - 1) * 100:.1f}%"
         )
-    
     with col2:
         current_price = df['Prix_Moyen'].iloc[-1]
         st.metric(
@@ -315,7 +505,6 @@ def create_kpi_metrics(df, oil_config):
             value=f"{current_price:.1f} €/kg",
             delta=f"{((df['Prix_Moyen'].iloc[-1] / df['Prix_Moyen'].iloc[0]) - 1) * 100:.1f}%"
         )
-    
     with col3:
         market_value = df['Valeur_Marche'].iloc[-1]
         st.metric(
@@ -323,7 +512,6 @@ def create_kpi_metrics(df, oil_config):
             value=f"{market_value:.1f} M€",
             delta=f"{((df['Valeur_Marche'].iloc[-1] / df['Valeur_Marche'].iloc[0]) - 1) * 100:.1f}%"
         )
-    
     with col4:
         efficacy = df['Efficacite_Therapeutique'].iloc[-1]
         st.metric(
@@ -333,9 +521,7 @@ def create_kpi_metrics(df, oil_config):
         )
 
 def create_production_analysis(df, oil_name, oil_config):
-    """Analyse de la production et du marché"""
     st.subheader("📊 Analyse Production & Marché")
-    
     fig = make_subplots(
         rows=2, cols=2,
         subplot_titles=('Production vs Demande', 'Évolution des Prix', 
@@ -343,8 +529,6 @@ def create_production_analysis(df, oil_name, oil_config):
         specs=[[{"secondary_y": True}, {"secondary_y": False}],
                [{"secondary_y": False}, {"secondary_y": False}]]
     )
-    
-    # Production vs Demande
     fig.add_trace(
         go.Scatter(x=df['Annee'], y=df['Production_Mondiale'], 
                   name="Production", line=dict(color=oil_config["couleur"])),
@@ -355,22 +539,16 @@ def create_production_analysis(df, oil_name, oil_config):
                   name="Demande", line=dict(color='#228B22')),
         row=1, col=1, secondary_y=True
     )
-    
-    # Évolution des Prix
     fig.add_trace(
         go.Scatter(x=df['Annee'], y=df['Prix_Moyen'], 
                   name="Prix Moyen", line=dict(color='#FFD700')),
         row=1, col=2
     )
-    
-    # Valeur du Marché
     fig.add_trace(
         go.Scatter(x=df['Annee'], y=df['Valeur_Marche'], 
                   name="Valeur Marché", line=dict(color='#8A2BE2')),
         row=2, col=1
     )
-    
-    # Croissance Comparative (normalisée)
     fig.add_trace(
         go.Scatter(x=df['Annee'], 
                   y=df['Production_Mondiale']/df['Production_Mondiale'].max(), 
@@ -382,40 +560,30 @@ def create_production_analysis(df, oil_name, oil_config):
                   name="Prix (norm)", line=dict(color='#FFD700')),
         row=2, col=2
     )
-    
     fig.update_layout(height=600, title_text=f"Analyse Marché - {oil_name}")
     st.plotly_chart(fig, use_container_width=True)
 
 def create_therapeutic_analysis(df, oil_config):
-    """Analyse des applications thérapeutiques"""
     st.subheader("💊 Analyse Thérapeutique")
-    
     col1, col2 = st.columns(2)
-    
     with col1:
-        # Efficacité thérapeutique
         fig = px.line(df, x='Annee', y='Efficacite_Therapeutique',
                      title='Évolution de l\'Efficacité Thérapeutique',
                      labels={'Efficacite_Therapeutique': 'Score d\'Efficacité'})
         fig.update_traces(line=dict(color=oil_config["couleur"], width=3))
         st.plotly_chart(fig, use_container_width=True)
-    
     with col2:
-        # Recherche scientifique
         fig = px.bar(df, x='Annee', y='Etudes_Scientifiques',
                     title='Études Scientifiques Publiées',
                     labels={'Etudes_Scientifiques': 'Nombre d\'Études'})
         fig.update_traces(marker_color=oil_config["couleur"])
         st.plotly_chart(fig, use_container_width=True)
-    
-    # Applications par secteur
     usage_data = pd.DataFrame({
         'Année': df['Annee'],
         'Aromathérapie': df['Usage_Aromatherapie'],
         'Cosmétique': df['Usage_Cosmetique'],
         'Pharmaceutique': df['Usage_Pharmaceutique']
     })
-    
     fig = px.area(usage_data, x='Année', 
                   y=['Aromathérapie', 'Cosmétique', 'Pharmaceutique'],
                   title='Évolution des Applications par Secteur',
@@ -423,11 +591,8 @@ def create_therapeutic_analysis(df, oil_config):
     st.plotly_chart(fig, use_container_width=True)
 
 def create_sustainability_analysis(df, oil_config):
-    """Analyse de durabilité environnementale"""
     st.subheader("🌱 Analyse Durabilité")
-    
     col1, col2 = st.columns(2)
-    
     with col1:
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=df['Annee'], y=df['Durabilite_Production'], 
@@ -437,17 +602,14 @@ def create_sustainability_analysis(df, oil_config):
         fig.update_layout(title='Durabilité vs Impact Environnemental',
                          xaxis_title='Année', yaxis_title='Score')
         st.plotly_chart(fig, use_container_width=True)
-    
     with col2:
-        # Radar chart des indicateurs de durabilité
         categories = ['Production', 'Qualité Bio', 'Durabilité', 'Impact Environ.']
         values = [
             df['Production_Mondiale'].iloc[-1] / df['Production_Mondiale'].max() * 100,
             df['Qualite_Bio'].iloc[-1],
             df['Durabilite_Production'].iloc[-1],
-            100 - df['Impact_Environnemental'].iloc[-1]  # Inversé car plus bas = mieux
+            100 - df['Impact_Environnemental'].iloc[-1]
         ]
-        
         fig = go.Figure(data=go.Scatterpolar(
             r=values,
             theta=categories,
@@ -455,18 +617,14 @@ def create_sustainability_analysis(df, oil_config):
             line=dict(color=oil_config["couleur"])
         ))
         fig.update_layout(
-            polar=dict(
-                radialaxis=dict(visible=True, range=[0, 100])
-            ),
+            polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
             showlegend=False,
             title='Indicateurs de Durabilité (Actuels)'
         )
         st.plotly_chart(fig, use_container_width=True)
 
 def create_comparative_analysis(dashboard, selected_oils):
-    """Analyse comparative entre plusieurs huiles"""
     st.subheader("📈 Analyse Comparative")
-    
     comparison_data = []
     for oil in selected_oils:
         df = dashboard.generate_comprehensive_data(oil)
@@ -483,26 +641,20 @@ def create_comparative_analysis(dashboard, selected_oils):
             'Type': config['type'],
             'Couleur': config['couleur']
         })
-    
     comp_df = pd.DataFrame(comparison_data)
-    
     col1, col2 = st.columns(2)
-    
     with col1:
         fig = px.bar(comp_df, x='Huile', y='Production', color='Huile',
                     title='Production Mondiale Comparée',
                     labels={'Production': 'Tonnes'},
                     color_discrete_map={oil: dashboard.oils_config[oil]['couleur'] for oil in selected_oils})
         st.plotly_chart(fig, use_container_width=True)
-    
     with col2:
         fig = px.bar(comp_df, x='Huile', y='Prix', color='Huile',
                     title='Prix Moyen Comparé',
                     labels={'Prix': '€/kg'},
                     color_discrete_map={oil: dashboard.oils_config[oil]['couleur'] for oil in selected_oils})
         st.plotly_chart(fig, use_container_width=True)
-    
-    # Radar chart comparatif
     fig = go.Figure()
     for oil in selected_oils:
         row = comp_df[comp_df['Huile'] == oil].iloc[0]
@@ -517,7 +669,6 @@ def create_comparative_analysis(dashboard, selected_oils):
             fill='toself',
             line=dict(color=dashboard.oils_config[oil]['couleur'])
         ))
-    
     fig.update_layout(
         polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
         title='Analyse Comparative Multi-Critères'
@@ -525,10 +676,7 @@ def create_comparative_analysis(dashboard, selected_oils):
     st.plotly_chart(fig, use_container_width=True)
 
 def create_market_overview(dashboard):
-    """Vue d'ensemble du marché"""
     st.subheader("🏢 Vue d'Ensemble du Marché")
-    
-    # Statistiques globales
     market_data = []
     for oil_name, config in dashboard.oils_config.items():
         df = dashboard.generate_comprehensive_data(oil_name)
@@ -542,25 +690,18 @@ def create_market_overview(dashboard):
             'Rendement (%)': config['rendement'] * 100,
             'Couleur': config['couleur']
         })
-    
     market_df = pd.DataFrame(market_data)
-    
-    # Top 10 par valeur de marché
     st.write("**Top 10 des Huiles par Valeur de Marché**")
     top_10 = market_df.nlargest(10, 'Valeur Marché (M€)')
     fig = px.bar(top_10, x='Huile', y='Valeur Marché (M€)', color='Huile',
                 color_discrete_map={row['Huile']: row['Couleur'] for _, row in top_10.iterrows()})
     st.plotly_chart(fig, use_container_width=True)
-    
-    # Répartition par type
     col1, col2 = st.columns(2)
-    
     with col1:
         type_counts = market_df['Type'].value_counts()
         fig = px.pie(values=type_counts.values, names=type_counts.index,
                     title='Répartition par Type Thérapeutique')
         st.plotly_chart(fig, use_container_width=True)
-    
     with col2:
         fig = px.scatter(market_df, x='Prix (€/kg)', y='Production (t)', 
                         size='Valeur Marché (M€)', color='Type',
@@ -568,58 +709,44 @@ def create_market_overview(dashboard):
         st.plotly_chart(fig, use_container_width=True)
 
 def create_oil_info_card(oil_config):
-    """Carte d'information sur l'huile sélectionnée"""
     st.sidebar.subheader("📋 Informations Huile Essentielle")
-    
     st.sidebar.write(f"**Type:** {oil_config['type']}")
     st.sidebar.write(f"**Rendement:** {oil_config['rendement']*100:.1f}%")
     st.sidebar.write("**Régions de production:**")
     for region in oil_config['regions']:
         st.sidebar.write(f"• {region}")
-    
     st.sidebar.write("**Propriétés principales:**")
     for prop in oil_config['proprietes']:
         st.sidebar.write(f"• {prop.capitalize()}")
-    
     st.sidebar.write("**Molécules principales:**")
     for molecule in oil_config.get('molecules_principales', []):
         st.sidebar.write(f"• {molecule}")
-    
     st.sidebar.write("**Contre-indications:**")
     for ci in oil_config.get('contre_indications', []):
         st.sidebar.write(f"• {ci}")
-    
     st.sidebar.write("**Évolution prix:**", oil_config['prix_evolution'])
     st.sidebar.write("**Évolution demande:**", oil_config['demande_evolution'])
 
+# --- Main ---
 def main():
     st.title("🌿 Dashboard Pharmacopée Complète - Huiles Essentielles")
     st.markdown("""
-    **Analyse complète des données de production, marché, recherche et durabilité pour 20 huiles essentielles**
+    **Analyse complète des données de production, marché, recherche et durabilité pour plus de 40 huiles essentielles**
     """)
     
-    # Initialisation du dashboard
     dashboard = CompleteEssentialOilDashboard()
-    
-    # Sidebar pour la sélection
-    st.sidebar.header("🔧 Configuration")
     available_oils = list(dashboard.oils_config.keys())
     selected_oil = st.sidebar.selectbox(
         "Sélectionnez une huile essentielle:",
         available_oils
     )
     
-    # Génération des données
     df = dashboard.generate_comprehensive_data(selected_oil)
     oil_config = dashboard.oils_config[selected_oil]
     
-    # Affichage des informations de l'huile
     create_oil_info_card(oil_config)
-    
-    # Métriques KPI
     create_kpi_metrics(df, oil_config)
     
-    # Onglets pour différentes analyses
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "📊 Marché & Production", 
         "💊 Applications", 
@@ -630,8 +757,6 @@ def main():
     
     with tab1:
         create_production_analysis(df, selected_oil, oil_config)
-        
-        # Données brutes
         with st.expander("📋 Voir les données détaillées"):
             st.dataframe(df.style.format({
                 'Production_Mondiale': '{:,.0f}',
@@ -642,11 +767,8 @@ def main():
     
     with tab2:
         create_therapeutic_analysis(df, oil_config)
-        
-        # Insights thérapeutiques
         st.subheader("💡 Insights Thérapeutiques")
         col1, col2 = st.columns(2)
-        
         with col1:
             st.info(f"""
             **Applications recommandées:**
@@ -654,7 +776,6 @@ def main():
             - {oil_config['proprietes'][1].capitalize()}
             - {oil_config['proprietes'][2].capitalize()}
             """)
-        
         with col2:
             st.success(f"""
             **Potentiel de développement:**
@@ -665,13 +786,9 @@ def main():
     
     with tab3:
         create_sustainability_analysis(df, oil_config)
-        
-        # Recommandations durabilité
         st.subheader("♻️ Recommandations Durabilité")
-        
         impact_score = df['Impact_Environnemental'].iloc[-1]
         durability_score = df['Durabilite_Production'].iloc[-1]
-        
         if impact_score > 40:
             st.warning("""
             **Attention:** Impact environnemental élevé. Recommandations:
@@ -680,10 +797,7 @@ def main():
             - Réduire la consommation d'eau
             """)
         else:
-            st.success("""
-            **Excellent:** Impact environnemental maîtrisé. Maintenir les bonnes pratiques.
-            """)
-        
+            st.success("**Excellent:** Impact environnemental maîtrisé. Maintenir les bonnes pratiques.")
         if durability_score < 70:
             st.warning("""
             **Amélioration possible:** Durabilité de production modérée.
@@ -693,13 +807,11 @@ def main():
             """)
     
     with tab4:
-        # Sélection multiple pour comparaison
         comparative_oils = st.multiselect(
             "Sélectionnez les huiles à comparer:",
             available_oils,
             default=[selected_oil, "Lavande", "Menthe Poivrée", "Arbre à Thé"]
         )
-        
         if len(comparative_oils) >= 2:
             create_comparative_analysis(dashboard, comparative_oils)
         else:
@@ -708,11 +820,10 @@ def main():
     with tab5:
         create_market_overview(dashboard)
     
-    # Footer
     st.markdown("---")
     st.markdown("""
     <div style='text-align: center'>
-        <p>📅 Données simulées pour la période 2000-2025 | 🌿 Dashboard Pharmacopée Complète - 20 Huiles Essentielles</p>
+        <p>📅 Données simulées pour la période 2000-2025 | 🌿 Dashboard Pharmacopée Complète - 42 Huiles Essentielles</p>
     </div>
     """, unsafe_allow_html=True)
 
