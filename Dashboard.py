@@ -25,7 +25,7 @@ class CompleteEssentialOilDashboard:
                       '#4ECDC4', '#45B7D1', '#F9A602', '#6A0572', '#2A9D8F']
         
     def _get_complete_oils_config(self):
-        """Configuration complète pour toutes les huiles essentielles (42 huiles)"""
+        """Configuration complète pour toutes les huiles essentielles (50 huiles)"""
         return {
             # === 20 huiles existantes ===
             "Lavande": {
@@ -319,7 +319,7 @@ class CompleteEssentialOilDashboard:
                 "couleur": "#A5D6A7"
             },
 
-            # === 10 nouvelles huiles (ajout supplémentaire) ===
+            # === 10 nouvelles huiles (ajout précédent) ===
             "Thym": {
                 "production_base": 50, "price_base": 45, "type": "antiseptique",
                 "proprietes": ["antibactérienne", "antifongique", "immunostimulante", "expectorante"],
@@ -409,6 +409,80 @@ class CompleteEssentialOilDashboard:
                 "contre_indications": ["Aucune connue"],
                 "prix_evolution": "+++", "demande_evolution": "++",
                 "couleur": "#FF8A65"
+            },
+
+            # === 8 nouvelles huiles (ajout de cette version) ===
+            "Néroli": {
+                "production_base": 10, "price_base": 180, "type": "relaxante",
+                "proprietes": ["anti-anxiété", "apaisante", "antispasmodique", "équilibrante nerveuse"],
+                "regions": ["Tunisie", "Maroc", "Egypte"], "rendement": 0.001,
+                "molecules_principales": ["Linalol", "Limonène", "β-Pinène"],
+                "contre_indications": ["Photosensibilisante"],
+                "prix_evolution": "+++", "demande_evolution": "+++",
+                "couleur": "#FFF176"
+            },
+            "Petit Grain": {
+                "production_base": 15, "price_base": 75, "type": "relaxante",
+                "proprietes": ["sédative", "antispasmodique", "neurotonique", "équilibrante"],
+                "regions": ["Paraguay", "Maroc", "Espagne"], "rendement": 0.002,
+                "molecules_principales": ["Linalol", "Acétate de linalyle", "β-Pinène"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#C8E6C9"
+            },
+            "Coriandre": {
+                "production_base": 55, "price_base": 50, "type": "digestive",
+                "proprietes": ["digestive", "antispasmodique", "carminative", "tonique"],
+                "regions": ["Inde", "Maroc", "Russie"], "rendement": 0.008,
+                "molecules_principales": ["Linalol", "α-Pinène", "Géraniol"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#81C784"
+            },
+            "Laurier noble": {
+                "production_base": 30, "price_base": 45, "type": "respiratoire",
+                "proprietes": ["expectorante", "antiseptique", "stimulante", "tonique"],
+                "regions": ["Turquie", "Espagne", "Maroc"], "rendement": 0.006,
+                "molecules_principales": ["Cinéole", "α-Pinène", "Linalol"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#558B2F"
+            },
+            "Immortelle": {
+                "production_base": 8, "price_base": 200, "type": "cicatrisante",
+                "proprietes": ["anti-inflammatoire", "cicatrisante", "hémostatique", "régénérante"],
+                "regions": ["Corse", "Croatie", "Italie"], "rendement": 0.001,
+                "molecules_principales": ["Néryl acétate", "Italidiones", "α-Pinène"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "+++", "demande_evolution": "+++",
+                "couleur": "#FFD54F"
+            },
+            "Ciste ladanifère": {
+                "production_base": 12, "price_base": 110, "type": "cicatrisante",
+                "proprietes": ["cicatrisante", "hémostatique", "astringente", "antiseptique"],
+                "regions": ["Espagne", "France", "Grèce"], "rendement": 0.002,
+                "molecules_principales": ["α-Pinène", "Cédrol", "Cistus diterpenes"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "+++", "demande_evolution": "+",
+                "couleur": "#D7CCC8"
+            },
+            "Myrte": {
+                "production_base": 25, "price_base": 60, "type": "respiratoire",
+                "proprietes": ["expectorante", "antiseptique", "décongestionnante", "tonique"],
+                "regions": ["France", "Tunisie", "Maroc"], "rendement": 0.005,
+                "molecules_principales": ["Cinéole", "α-Pinène", "Myrténol"],
+                "contre_indications": ["Aucune connue"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#4CAF50"
+            },
+            "Genévrier": {
+                "production_base": 30, "price_base": 55, "type": "détoxifiante",
+                "proprietes": ["diurétique", "détoxifiante", "antiseptique", "tonique"],
+                "regions": ["France", "Italie", "Pologne"], "rendement": 0.006,
+                "molecules_principales": ["α-Pinène", "Cédrol", "Limonène"],
+                "contre_indications": ["Insuffisance rénale", "Femmes enceintes"],
+                "prix_evolution": "++", "demande_evolution": "++",
+                "couleur": "#5D4037"
             }
         }
     
@@ -731,7 +805,7 @@ def create_oil_info_card(oil_config):
 def main():
     st.title("🌿 Dashboard Pharmacopée Complète - Huiles Essentielles")
     st.markdown("""
-    **Analyse complète des données de production, marché, recherche et durabilité pour plus de 40 huiles essentielles**
+    **Analyse complète des données de production, marché, recherche et durabilité pour 50 huiles essentielles**
     """)
     
     dashboard = CompleteEssentialOilDashboard()
@@ -823,7 +897,7 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div style='text-align: center'>
-        <p>📅 Données simulées pour la période 2000-2025 | 🌿 Dashboard Pharmacopée Complète - 42 Huiles Essentielles</p>
+        <p>📅 Données simulées pour la période 2000-2025 | 🌿 Dashboard Pharmacopée Complète - 50 Huiles Essentielles</p>
     </div>
     """, unsafe_allow_html=True)
 
